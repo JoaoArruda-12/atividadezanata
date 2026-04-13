@@ -1,0 +1,145 @@
+/* RESET E CORES */
+
+/* Remove espaçamentos padrão de todos os elementos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Faz largura incluir padding e borda */
+}
+
+/* Estilo geral da página */
+body {
+  font-family: "Segoe UI", sans-serif; /* Fonte */
+
+  background: linear-gradient(135deg, #056cc0 0%, #d2dbdd 100%);
+  /* Gradiente de fundo */
+
+  color: #f4f4f4; /* Cor do texto */
+  min-height: 100vh; /* Altura mínima = 100% da tela */
+}
+
+/* HEADER FLEXBOX */
+
+/* Estiliza o cabeçalho */
+header {
+  background-color: #fff; /* Fundo branco */
+  padding: 1.5rem 10%; /* Espaçamento interno */
+
+  display: flex; /* Ativa Flexbox */
+  justify-content: space-between; /* Espaço entre os elementos */
+  align-items: center; /* Alinha verticalmente */
+
+  position: sticky; /* Fixa o header ao rolar */
+  top: 0; /* Fica no topo */
+  z-index: 100; /* Fica acima de outros elementos */
+}
+
+/* Cor do título */
+header h1 {
+  color: #2c1b18;
+}
+
+/* Estilo da palavra "Geek" */
+header h1 span {
+  color: #e67e22;
+}
+
+/* Links do menu */
+nav a {
+  text-decoration: none; /* Remove sublinhado */
+  color: #6f4e37;
+  margin-left: 20px; /* Espaço entre links */
+  font-weight: bold;
+  transition: 0.3s; /* Suaviza efeitos */
+}
+
+/* Efeito ao passar o mouse */
+nav a:hover {
+  color: #e67e22;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+  max-width: 1100px; /* Largura máxima */
+  margin: 40px auto; /* Centraliza */
+  padding: 20px;
+
+  animation: fadeIn 1s ease-in; /* Aplica animação */
+}
+
+/* Seção de destaque */
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* GRID DE CARDS COM FLEXBOX */
+
+.container-cards {
+  display: flex; /* Layout flexível */
+  flex-wrap: wrap; /* Permite quebrar linha */
+  gap: 30px; /* Espaço entre cards */
+  justify-content: center; /* Centraliza */
+}
+
+/* Card individual */
+.card {
+  background: white;
+  color: #333;
+
+  width: 300px;
+  padding: 15px;
+
+  border-radius: 15px; /* Bordas arredondadas */
+  text-align: center;
+
+  transition: transform 0.3s ease; /* Animação suave */
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* Sombra */
+}
+
+/* Imagem do card */
+.card img {
+  width: 100%;
+  height: 200px;
+
+  object-fit: cover;
+  /* Mantém proporção e corta excesso */
+
+  border-radius: 10px;
+}
+
+/* Efeito ao passar o mouse no card */
+.card:hover {
+  transform: scale(1.05); /* Aumenta levemente */
+}
+
+/* Preço */
+.preco {
+  display: block; /* Faz ocupar linha inteira */
+  margin-top: 15px;
+  font-weight: bold;
+  color: #e67e22;
+  font-size: 1.2rem;
+}
+
+/* ANIMAÇÃO */
+
+/* Define a animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Começa invisível */
+  }
+  to {
+    opacity: 1; /* Termina visível */
+  }
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #ccc;
+}
